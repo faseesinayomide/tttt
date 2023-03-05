@@ -429,7 +429,7 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
+        display: none;
     }
 
     nav ul li a {
