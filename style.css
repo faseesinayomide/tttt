@@ -5,48 +5,57 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #bfc3c4b2;
+    background-color: #706c6ab2;
 }
 
 header {
-    background-color: rgb(28, 57, 73);
+    display: flex;
+    /* justify-content: center;*/
     margin: 0;
+    padding: 2%;
+    justify-content: space-between;
+    background-color: rgba(28, 57, 73, 0.979);
+}
+
+.logo {
+    margin: 7px 13px;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 5px;
+    justify-content: center;
+    margin: 2% 10px;
+
 }
 
-nav .logo {
-    width: 120px;
-    height: 120px;
-    margin: 10px;
-}
-
-nav ul {
+ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 3% 10px;
 }
 
-nav ul li {
+li {
     list-style: none;
-    padding: 10px;
 }
 
-nav ul li a {
+nav a {
+    margin: 10px;
+    color: whitesmoke;
     padding: 10px;
-    margin: 5px;
-    text-decoration: none;
     text-transform: capitalize;
-    color: antiquewhite;
-    font-size: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    font-variant: small-caps;
 }
 
+nav a:hover {
+    border-bottom: 2px groove whitesmoke;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) ease;
+}
 
 /*wrapper*/
 .wrapper {
@@ -54,15 +63,18 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background: url(/img/IMG_2337.JPG);
+
+    background: linear-gradient(122deg, rgba(44, 40, 40, 0.705), rgba(0, 0, 0, 0.6)), url(/img/IMG_2337.JPG);
     background-position: center;
     background-size: cover;
 }
 
 .wrap {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 30px;
-    background-color: rgba(99, 51, 23, 0.767);
+    background-color: #633317c4;
 
 }
 
@@ -85,17 +97,25 @@ nav ul li a {
     z-index: 3;
 }
 
-.wrap button {
-    margin-left: 33%;
+.but {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.but a {
     padding: 15px;
     background: transparent;
     color: white;
-    border-color: white;
+    border: 2px solid white;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.616);
     font-size: 20px;
     text-transform: capitalize;
     font-family: sans-serif;
+    text-decoration: none;
+
     letter-spacing: 1px;
 }
 
@@ -104,7 +124,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .items button {
@@ -335,15 +355,21 @@ footer {
     text-decoration: none;
     color: white;
     margin: 10px;
+    padding: 8px 10px;
     text-transform: capitalize;
     font-size: 20px;
+}
+
+.footer-heading-1 a:hover {
+    border-bottom: 1px solid white;
+    transition: 0.5s ease-in-out;
 }
 
 .footer-copywrite {
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin: 15px 5px;
+    margin: 10px 5px;
 }
 
 .footer-copywrite h1 {
@@ -424,18 +450,7 @@ footer {
 
 /*mobile responsiveness*/
 @media screen and (max-width:700px) {
-    nav ul li {
-        flex-direction: column;
-    }
 
-    nav ul {
-        display: none;
-    }
-
-    nav ul li a {
-        flex-direction: column;
-        margin: 3px 10px;
-    }
 
     .wrap {
         padding: 20px;
